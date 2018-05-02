@@ -15,7 +15,7 @@ class CharacterInformation {
 	// base: 18/17/16/15/14/13
 	// race: 2/0/0/0/0/0
 	// bracers 4/0/0/0/0/0
-	
+	//testing githubthird
 	
 	
 	
