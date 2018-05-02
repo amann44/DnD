@@ -9,13 +9,15 @@ public class DnD {
 		String userInput; //User input
 		Scanner sc = new Scanner(System.in);
 		CharacterInformation pc = new CharacterInformation();
-		System.out.println(pc.strMod);
+/*		System.out.println(pc.strMod);
 		pc.setModifiers();
 		System.out.println(pc.strMod);
 		pc.strength = 24;
 		System.out.println(pc.strMod);
 		pc.setModifiers();
-		System.out.println(pc.strMod);
+		System.out.println(pc.strMod);*/
+		
+		pc.getRaceBonuses();
 		
 		
 		

@@ -10,6 +10,8 @@ class CharacterInformation {
 	short intelligence  = 15;
 	short wisdom 		= 14;
 	short charisma 		= 13;
+	String charRace = "orc";
+	Race race = new Race(charRace);
 	
 	// We want to use an array system for keeping track of the base stats of a character
 	// base: 18/17/16/15/14/13
@@ -17,7 +19,10 @@ class CharacterInformation {
 	// bracers 4/0/0/0/0/0
 	//testing githubthird
 	
-	
+	//Calling race bonus array and displaying values of strength and constitution
+	public void getRaceBonuses() {
+		System.out.println(race.attrMods[0]);
+	}
 	
 	int strMod, conMod, dexMod, intMod, wisMod, chaMod;
 	int armorClass, fortitude, reflex, will;

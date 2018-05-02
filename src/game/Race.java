@@ -12,9 +12,27 @@ public class Race {
 	private int refBonus = 0;
 	private int willBonus = 0;
 	private int speedBonus = 0;
-	private int[] attrMods = new int[11];
+	public int[] attrMods = new int[11];
+	
+	public Race(String race) {
+		addBonuses(race);
+	}
+	
+	
 	
 	private void addBonuses(String race) {
+		switch(race){
+			case "orc": 
+				strBonus+=2;
+				conBonus+=2;
+			break;
+			default:
+				System.out.println("invalid or no race variable passed to Race.addBonuses");
+		}
+		
+		
+		
+		
 		attrMods[0]=strBonus;
 		attrMods[1]=conBonus;
 		attrMods[2]=dexBonus;
