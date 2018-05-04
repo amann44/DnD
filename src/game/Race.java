@@ -2,7 +2,7 @@ package game;
 
 public class Race {
 	
-
+	private String race;
 	//Initializing ability scores  /Array: 0-5
 	private int strBonus, conBonus, dexBonus, intBonus, wisBonus, chaBonus;
 	//Initilizing  saves 		   /Array: 6-9
@@ -11,7 +11,9 @@ public class Race {
 	private int baseSpeed = 6;
 	private int initiative = 0;
 	//Initilizing the array to hold the combat stats
-	private int[] attrMods = new int[11];
+	private int[] abilityScores = new int[6];
+	private int[] savesScores = new int[4];
+	
 		
 	//Initializing skill checks	   /Array: 0-16
 	private int acrobatics, arcana, athletics, bluff, diplomacy, dungeoneering, endurance, heal, history, insight, intimidate, nature, perception, religion, stealth, streetwise, thievery;
@@ -21,22 +23,43 @@ public class Race {
 	//Should these be handled by a get that passes race when necessary? Languages vary.
 	private String size = "Medium";
 	private String vision = "Normal";
-	private String languages = "Common";
+	private String languages = "Common"; //Only one language supported: multiple languages to be implemented
 
+	
+	public Race(String race) {
+		this.race = race;
+		churnStats();
+	}
 
+	
+	private void churnStats() {
+		setRacialBonuses(race);
+		compileAttributeBonuses();
+	}
+	
+	
+	public int[] getAbilityScoresArray(){ return abilityScores; }
+	public int[] getSavesScoresArray(){ return savesScores; }
+	public int getBaseSpeed(){ return baseSpeed; }
+	public String getLanguages(){ return languages; }
+	
+	
+	
 	private void compileAttributeBonuses() {
-		attrMods[0]=strBonus;
-		attrMods[1]=conBonus;
-		attrMods[2]=dexBonus;
-		attrMods[3]=intBonus;
-		attrMods[4]=wisBonus;
-		attrMods[5]=chaBonus;
-		attrMods[6]=acBonus;
-		attrMods[7]=fortBonus;
-		attrMods[8]=refBonus;
-		attrMods[9]=willBonus;
-		attrMods[10]=baseSpeed;
-		attrMods[11]=initiative;
+		abilityScores[0]=strBonus;
+		abilityScores[1]=conBonus;
+		abilityScores[2]=dexBonus;
+		abilityScores[3]=intBonus;
+		abilityScores[4]=wisBonus;
+		abilityScores[5]=chaBonus;
+		
+		if(race == "Human") {
+			savesScores[0]=acBonus;
+			savesScores[1]=fortBonus;
+			savesScores[2]=refBonus;
+			savesScores[3]=willBonus;
+		}
+	
 	}
 	
 	private void compileSkillBonuses() {

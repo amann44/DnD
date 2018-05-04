@@ -6,7 +6,7 @@ import game.CharacterInformation;
 
 public class DnD {
 	public static void main(String[] args) {
-		String userInput; //User input
+		/*String userInput; //User input
 		Scanner sc = new Scanner(System.in);
 		CharacterInformation pc = new CharacterInformation();
 		System.out.println(pc.strMod);
@@ -16,9 +16,9 @@ public class DnD {
 		System.out.println(pc.strMod);
 		pc.setModifiers();
 		System.out.println(pc.strMod);
+		*/
 		
-		
-		
+		Character ch = new Character();
 		
 		
 		

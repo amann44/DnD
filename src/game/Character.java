@@ -1,6 +1,6 @@
 package game;
 // this is Combatant
-class CharacterInformation {
+class Character {
 	// should be built by constructor
 	String name = "Bobby Dragonslayer";
 	short level 		=  1;
@@ -10,12 +10,58 @@ class CharacterInformation {
 	short intelligence  = 15;
 	short wisdom 		= 14;
 	short charisma 		= 13;
+	String race = "Dragonborn";
+	Race rce = new Race(race);
+	//int[] attrArray = new int[11]; // delete this
+	private int[] abilityScores = new int[6];
+	private int[] savesScores = new int[4];
+	private int speed = 0;
+	private String languages; // single language implementation. needs to change to array later for multi language support
+	
 	
 	// We want to use an array system for keeping track of the base stats of a character
 	// base: 18/17/16/15/14/13
 	// race: 2/0/0/0/0/0
 	// bracers 4/0/0/0/0/0
-	//testing githubthird
+	
+	
+	
+	//////////////
+	
+	
+	public Character() {
+		getRaceModifiers();
+		System.out.print(savesScores[1]);
+		
+		
+	}
+	
+	public void getRaceModifiers() {
+		
+		int[] tempAbilityScores = new int[6];
+		tempAbilityScores = rce.getAbilityScoresArray();
+		for(int i=0;i<6;++i) {
+			abilityScores[i] += tempAbilityScores[i];
+		}
+		
+		int[] tempSavesScores = new int[4];
+		tempSavesScores = rce.getSavesScoresArray();
+		for(int i=0;i<4;++i) {
+			savesScores[i] += tempSavesScores[i];
+		}
+		
+		
+		savesScores = rce.getSavesScoresArray();
+		speed += rce.getBaseSpeed();
+		languages = rce.getLanguages();
+	}
+	
+	
+	//////////////
+	
+	
+	
+	
 	
 	
 	
