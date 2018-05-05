@@ -3,13 +3,16 @@ package game;
 class Character {
 	// should be built by constructor
 	String name = "Bobby Dragonslayer";
-	short level 		=  1;
-	short strength 		= 18;
-	short constitution  = 17;
-	short dexterity 	= 16;
-	short intelligence  = 15;
-	short wisdom 		= 14;
-	short charisma 		= 13;
+	private short level 		=  1;
+	private short strength 		= 18;
+	private short constitution  = 17;
+	private short dexterity 	= 16;
+	private short intelligence  = 15;
+	private short wisdom 		= 14;
+	private short charisma 		= 13;
+	private short health;
+	private String location = "Worn Path";
+	
 	String race = "Dragonborn";
 	Race rce = new Race(race);
 	//int[] attrArray = new int[11]; // delete this
@@ -31,8 +34,6 @@ class Character {
 	
 	public Character() {
 		getRaceModifiers();
-		System.out.print(savesScores[1]);
-		
 		
 	}
 	
@@ -92,8 +93,13 @@ class Character {
 	public int getIntMod() {return intMod;}
 	public int getWisMod() {return wisMod;}
 	public int getChaMod() {return chaMod;}
-	
 	//END set/Get MODS
+	
+	//Other gets/sets
+	public void setLocation(String location) {this.location = location;}
+	
+	public String getLocation() {return location;}
+	//END other gets/sets
 	
 	
 	//START set/Get Defenses
