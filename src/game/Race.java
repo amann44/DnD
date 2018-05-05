@@ -1,7 +1,7 @@
 package game;
 
 public class Race {
-	private int strBonus = 900;
+	private int strBonus = 0;
 	private int conBonus = 0;
 	private int dexBonus = 0;
 	private int intBonus = 0;
