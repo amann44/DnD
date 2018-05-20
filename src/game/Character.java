@@ -5,57 +5,39 @@ class Character {
 	String name = "Bobby Dragonslayer";
 	String race = "Dragonborn";
 
-	short level 		=  1;
-	short strength 		= 18;
-	short constitution  = 17;
-	short dexterity 	= 16;
-	short intelligence  = 15;
-	short wisdom 		= 14;
-	short charisma 		= 13;
-	
+	 short level =  1;
+	 private short strength 	= 18;
+	 private short constitution = 17;
+	 private short dexterity 	= 16;
+	 private short intelligence = 15;
+	 private short wisdom 		= 14;
+	 private short charisma 	= 13;	 
+	 int[] abilityScores = {strength, constitution, dexterity, intelligence, wisdom, charisma};
+
 	Race rce = new Race(race);
-	//int[] attrArray = new int[11]; // delete this
-	private int[] abilityScores = new int[6];
-	private int[] savesScores = new int[4];
+	Attributes attr = new Attributes(rce, abilityScores);	
+	Equipment equipment = new Equipment();
+	
+	
+	public void testMethod() {
+		equipment.
+		System.out.println("Test method's getTotalStr :" + attr.getTotalStr());
+	
+	};
+
+	
+	/*
 	private int speed = 0;
 	private String languages; // single language implementation. needs to change to array later for multi language support
-	
-	
-	// We want to use an array system for keeping track of the base stats of a character
-	// base: 18/17/16/15/14/13
-	// race: 2/0/0/0/0/0
-	// bracers 4/0/0/0/0/0
-	
-	
-	
-	//////////////
-	
-	
-	public Character() {
-		getRaceModifiers();
-		System.out.print(savesScores[1]);
 		
-		
-	}
 	
-	public void setModifiers() {
-		getStrength(this.strength);
-		getConstitution(this.constitution);
-		getDexterity(this.dexterity);
-		getIntelligence(this.intelligence);
-		getWisdom(this.wisdom);
-		getCharisma(this.charisma);
-	}
-	
-	public int getStrMod() {return strMod;}
-	public int getConMod() {return conMod;}
-	public int getDexMod() {return dexMod;}
-	public int getIntMod() {return intMod;}
-	public int getWisMod() {return wisMod;}
-	public int getChaMod() {return chaMod;}
-	
-	
-	//////////////
+	public short getStrength() {return this.strength;};
+	public short getConstitution() {return this.constitution;};
+	public short getDexterity() {return this.dexterity;};
+	public short getIntelligence() {return this.intelligence;};
+	public short getWisdom() {return this.wisdom;};
+	public short getCharisma() {return this.charisma;};
+	 */
 
 }
 

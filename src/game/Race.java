@@ -25,16 +25,21 @@ public class Race {
 	private String vision = "Normal";
 	private String languages = "Common"; //Only one language supported: multiple languages to be implemented
 
-	
+	public Race() {
+		
+	}
 	public Race(String race) {
+		System.out.println("Passed race from Character to Race.");
 		this.race = race;
 		churnStats();
 	}
 
 	
 	private void churnStats() {
+		System.out.println("churnStats() has ran as " + race);
 		setRacialBonuses(race);
 		compileAttributeBonuses();
+		System.out.println("abilityScores[0] :" + abilityScores[0]);
 	}
 	
 	

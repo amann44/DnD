@@ -19,20 +19,25 @@ public class DnD {
 		*/
 		
 		Character ch = new Character();
+		ch.testMethod();
 		
 		
+		//ch.getRaceModifiers();
 		
-		
-		
-		
-		
+		/*	
+		System.out.println("deadline");
+		System.out.println(ch.name);
+		System.out.println(ch.race);
+		System.out.println(ch.abilityScores[0]);
+		System.out.println(ch.abilityScores[0]);
+		System.out.println(ch.getStrength());
 		
 		
 		
 		/// String input -  String name = sc.nextLine();
 		
 		
-		/*
+
 		System.out.println("Welcome to DnD!" + "\n" + ">>new - create new character" + "\n"+
 		">>load - load existing character");
 		*/
